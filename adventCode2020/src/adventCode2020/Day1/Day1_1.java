@@ -9,7 +9,7 @@ public class Day1_1 {
 	public static void main(String args[]) throws FileNotFoundException {
 		int num1, num2;
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
-		Scanner fileScanner = new Scanner(new File("C:\\Users\\Samuel\\git\\adventcode2020\\adventCode2020\\src\\adventCode2020\\Day1\\numbers.txt"));
+		Scanner fileScanner = new Scanner(new File("src/adventCode2020/Day1/numbers.txt"));
 		while (fileScanner.hasNextInt()) {
 			numbers.add(fileScanner.nextInt());
 		}
