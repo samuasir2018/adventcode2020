@@ -17,7 +17,7 @@ public class Day1_1 {
 			num1 = numbers.get(i);
 			num2 = 2020 - num1;
 			if (numbers.contains(num2)) {
-				System.out.println("El resultado de la suma es es: " + (num1+num2) +" y la multiplicación " +num1*num2);
+				System.out.println("The result is " + (num1+num2) + " The result of multiplication is " +num1*num2);
 				break;
 			}
 		}
