@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Day2_1 {
+public class Day2_2 {
 	public static void main(String args[]) throws FileNotFoundException {
 		ArrayList<String> passwords = new ArrayList<String>();
 		ArrayList<String> validPassword = new ArrayList<String>();
@@ -18,17 +18,17 @@ public class Day2_1 {
 			String[] splitPass = passwords.get(i).split("\\s+");
 			String[] splitNumber = splitPass[0].split("-");
 			String password = splitPass[2];
-			int count = 0;
-			int num1 = Integer.parseInt(splitNumber[0]);
-			int num2 = Integer.parseInt(splitNumber[1]);
+			int pos1 = Integer.parseInt(splitNumber[0]);
+			int pos2 = Integer.parseInt(splitNumber[1]);
 			char a = splitPass[1].charAt(0);
-			for (int j = 0; j < password.length(); j++) {
-				if (a == password.charAt(j)) {
-					count++;
+			try {
+				if ((a == password.charAt(pos1 - 1)) && (a != password.charAt(pos2 - 1))) {
+					validPassword.add(password);
+				} else if ((a == password.charAt(pos2 - 1)) && (a != password.charAt(pos1 - 1))) {
+					validPassword.add(password);
 				}
-			}
-			if (num1 <= count && count <= num2) {
-				validPassword.add(password);
+			} catch (IndexOutOfBoundsException e) {
+
 			}
 		}
 		int numPasswords = validPassword.size();
