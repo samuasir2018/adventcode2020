@@ -17,7 +17,8 @@ public class Day3_2 {
 		System.out.println(tree4);
 		int tree5 = countTrees(2,1);
 		System.out.println(tree5);
-		int finalResult = (tree1*tree2*tree3*tree4*tree5);
+		long finalResult = (tree1*tree2*tree3*tree4);
+		finalResult = finalResult*tree5;
 		System.out.println(finalResult);
 	}
 	static int countTrees(int down, int right) throws FileNotFoundException {

@@ -15,10 +15,10 @@ public class Day3_1 {
 		while (fileScanner.hasNext()) {
 			map.add(fileScanner.nextLine());
 		}
-		int lineSize = (map.get(0).length());
+		int lineSize = (map.get(j).length());
 		for (int i=1; i<map.size(); i++) {
 			j = j+3;
-			if(map.get(i).charAt(j%lineSize) == a) {
+			if(map.get(i%map.size()).charAt(j%lineSize) == a) {
 				count++;
 			}
 		}
