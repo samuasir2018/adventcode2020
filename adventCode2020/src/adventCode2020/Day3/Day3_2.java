@@ -24,13 +24,14 @@ public class Day3_2 {
 		int count = 0;
 		char a = '#';
 		int j = 0;
+		int lineStart = down;
 		ArrayList<String> map = new ArrayList<String>();
 		Scanner fileScanner = new Scanner(new File("src/adventCode2020/Day3/input.txt"));
 		while (fileScanner.hasNext()) {
 			map.add(fileScanner.nextLine());
 		}
 		int lineSize = (map.get(0).length());
-		for (int i=1; i<map.size(); i = i + down) {
+		for (int i = lineStart ; i<map.size(); i = i + down) {
 			j = j+right;
 			if(map.get(i%map.size()).charAt(j%lineSize) == a) {
 				count++;
