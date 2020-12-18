@@ -1,0 +1,12 @@
+iyr:1933 hcl:7c63aa cid:72 eyr:2028
+ecl:hzl
+byr:2009 hgt:164cm pid:104496116
+
+eyr:2024 hcl:#b6652a
+cid:340
+byr:1929 ecl:oth iyr:2014 pid:186640193
+hgt:193in
+
+iyr:2015 eyr:2024 hgt:184cm
+ecl:blu hcl:#a97842 byr:1959 pid:932817398
+
